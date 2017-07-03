@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Langton</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+    <aside id="setting-panel">
+        <div class="setting">
+            <p>
+                <label class="setting-title">Colors</label>
+            </p>
+            <div id="color-setting-list">
+                <p class="color-setting-wrapper">
+                    <span style="background-color: black;" class="color-setting-color"></span>
+                    <span class="color-setting-direction" data-direction="left"></span>
+                </p>
+                <p class="color-setting-wrapper">
+                    <span style="background-color: white;" class="color-setting-color"></span>
+                    <span class="color-setting-direction" data-direction="right"></span>
+                </p>
+            </div>
+            <p>
+                <button id="setting-color-add">+</button>
+            </p>
+        </div>
+        <div class="setting">
+            <p>
+                <label class="setting-title">Speed (x<span id="setting-speed">1</span>)</label>
+            </p>
+            <p>
+                <button id="setting-speed-down">-</button>
+                <button id="setting-speed-up">+</button>
+            </p>
+        </div>
+        <div class="setting">
+            <p>
+                <label class="setting-title">Zoom</label>
+            </p>
+            <p>
+                <input type="text" name="zoom" id="setting-zoom" disabled="disabled" value="1" />
+                <button id="setting-zoom-out">-</button>
+                <button id="setting-zoom">+</button>
+            </p>
+        </div>
+        <div class="setting">
+            <button id="setting-reverse">Reverse</button>
+        </div>
+        <div class="setting">
+            <button id="start-button">Start</button>
+        </div>
+        <div class="setting">
+            <button id="reset-button">Reset</button>
+        </div>
+    </aside>
+    <div id="canvas-wrapper">
+        <p id="step-number"></p>
+        <canvas width="1001" height="1001" id="langton"></canvas>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+    "vhost": "langton.local",
+    "sourceRoot": "./src/assets/",
+    "destinationRoot": "./www/",
+    "tasks": {
+        "sass": {
+            "source": ["sass/**/*.scss"],
+            "destination": "css",
+            "browsers": ["last 2 versions"]
+        },
+        "lesshint": {
+            "source": ["less/**/*.less"]
+        },
+        "jslibs": {
+            "source": ["libs/**/*.js"],
+            "destination": "scripts",
+            "destinationFile": "lib.js"
+        },
+        "scripts": {
+            "source": ["scripts/app.js"],
+            "destination": "scripts",
+            "destinationFile": "app.js",
+            "babelPresets": "es2015"
+        },
+        "eslint": {
+            "source": ["scripts/**/*.js"],
+            "config": {
+                "globals": []
+            }
+        },
+        "views": {
+            "source": ["views/**/*.html", "views/**/*.php"],
+            "destination": "",
+            "minifyHTML": true
+        },
+        "images": {
+            "source": ["images/**/*"],
+            "destination": "images",
+            "minify": true
+        }
+    }
+}
